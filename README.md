@@ -1,4 +1,2 @@
-test
-====
+Magento Test
 
-test
