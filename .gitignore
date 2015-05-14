@@ -19,6 +19,7 @@ sitemap.xml
 
 #MAGENTO FILES
 .htaccess.sample
+/api.php
 app/code/community/Phoenix/
 app/code/community/Cm/
 app/code/core/
@@ -63,16 +64,16 @@ app/etc/local.xml
 app/.htaccess
 app/locale/
 app/Mage.php
-cron.php
-cron.sh
+/cron.php
+/cron.sh
 downloader/
 errors/
 favicon.ico
-get.php
+/get.php
 includes/
-index.php
+/index.php
 index.php.sample
-install.php
+/install.php
 js/blank.html
 js/calendar/
 js/enterprise/
@@ -107,7 +108,7 @@ LICENSE_AFL.txt
 LICENSE.html
 LICENSE.txt
 LICENSE_EE*
-mage
+/mage
 media/customer/
 media/dhl/
 media/downloadable/
@@ -116,7 +117,6 @@ media/import/
 media/xmlconnect/
 media/catalog/product/cache/
 media/catalog/product/placeholder/default/
-api.php
 php.ini.sample
 pkginfo/
 RELEASE_NOTES.txt
