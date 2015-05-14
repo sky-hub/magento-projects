@@ -1,0 +1,8 @@
+<config>
+    <modules>
+        <SkyLab_Banner>
+            <active>true</active>
+            <codePool>local</codePool>
+        </SkyLab_Banner>
+    </modules>
+</config>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout>
+    <adminhtml_banners_index>
+        <reference name="content">
+            <block type="skylab_banner/adminhtml_banner" name="banner"/>
+        </reference>
+    </adminhtml_banners_index>
+
+    <adminhtml_banners_new>
+        <update handle="adminhtml_banner_edit" />
+    </adminhtml_banners_new>
+
+    <adminhtml_banners_edit>
+        <update handle="editor"/>
+        <reference name="head">
+            <action method="setCanLoadExtJs">
+                <flag>1</flag>
+            </action>
+            <action method="setCanLoadTinyMce">
+                <flag>1</flag>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="skylab_banner/adminhtml_banner_edit" name="banner_edit"/>
+        </reference>
+        <reference name="left">
+            <block type="skylab_banner/adminhtml_banner_edit_tabs" name="banner_edit_tabs">
+                <block type="skylab_banner/adminhtml_banner_edit_tab_general" name="banner_edit_tab_general"/>
+                <action method="addTab">
+                    <name>banner_edit_tab_general</name>
+                    <block>banner_edit_tab_general</block>
+                </action>
+            </block>
+        </reference>
+    </adminhtml_banners_edit>
+
+    <adminhtml_group_index>
+        <reference name="content">
+            <block type="skylab_banner/adminhtml_group" name="banner_group"/>
+        </reference>
+    </adminhtml_group_index>
+
+    <adminhtml_group_new>
+        <update handle="adminhtml_group_edit" />
+    </adminhtml_group_new>
+
+    <adminhtml_group_edit>
+        <update handle="editor"/>
+        <reference name="head">
+            <action method="setCanLoadExtJs">
+                <flag>1</flag>
+            </action>
+            <action method="setCanLoadTinyMce">
+                <flag>1</flag>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="skylab_banner/adminhtml_group_edit" name="banner_group_edit"/>
+        </reference>
+        <reference name="left">
+            <block type="skylab_banner/adminhtml_group_edit_tabs" name="banner_group_edit_tabs">
+                <block type="skylab_banner/adminhtml_group_edit_tab_general" name="banner_group_edit_tab_general"/>
+                <action method="addTab">
+                    <name>banner_group_edit_tab_general</name>
+                    <block>banner_group_edit_tab_general</block>
+                </action>
+            </block>
+        </reference>
+    </adminhtml_group_edit>
+
+    <adminhtml_group_banners>
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="skylab_banner/adminhtml_group_edit_tab_banners" name="banner_group_edit_tab_banners"/>
+            <block type="adminhtml/widget_grid_serializer" name="banner_group_grid_serializer">
+                <reference name="banner_group_grid_serializer">
+                    <action method="initSerializerBlock">
+                        <grid_block_name>banner_group_edit_tab_banners</grid_block_name>
+                        <data_callback>getSelectedBanners</data_callback>
+                        <hidden_input_name>banners</hidden_input_name>
+                        <reload_param_name>group_banners</reload_param_name>
+                    </action>
+                    <action method="addColumnInputName">
+                        <input_name>position</input_name>
+                    </action>
+                </reference>
+            </block>
+        </block>
+    </adminhtml_group_banners>
+
+    <adminhtml_group_bannersgrid>
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="skylab_banner/adminhtml_group_edit_tab_banners" name="banner_group_edit_tab_banners"/>
+        </block>
+    </adminhtml_group_bannersgrid>
+
+    <adminhtml_group_product>
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="skylab_banner/adminhtml_group_edit_tab_product" name="banner_group_edit_tab_product"/>
+            <block type="adminhtml/widget_grid_serializer" name="banner_group_grid_serializer">
+                <reference name="banner_group_grid_serializer">
+                    <action method="initSerializerBlock">
+                        <grid_block_name>banner_group_edit_tab_product</grid_block_name>
+                        <data_callback>getSelectedProducts</data_callback>
+                        <hidden_input_name>products</hidden_input_name>
+                        <reload_param_name>group_products</reload_param_name>
+                    </action>
+                    <action method="addColumnInputName">
+                        <input_name>position</input_name>
+                    </action>
+                </reference>
+            </block>
+        </block>
+    </adminhtml_group_product>
+
+    <adminhtml_group_productgrid>
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="skylab_banner/adminhtml_group_edit_tab_product" name="banner_group_edit_tab_product"/>
+        </block>
+    </adminhtml_group_productgrid>
+
+    <adminhtml_group_cms>
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="skylab_banner/adminhtml_group_edit_tab_cms" name="banner_group_edit_tab_cms"/>
+            <block type="adminhtml/widget_grid_serializer" name="banner_group_grid_serializer">
+                <reference name="banner_group_grid_serializer">
+                    <action method="initSerializerBlock">
+                        <grid_block_name>banner_group_edit_tab_cms</grid_block_name>
+                        <data_callback>getSelectedPages</data_callback>
+                        <hidden_input_name>pages</hidden_input_name>
+                        <reload_param_name>group_pages</reload_param_name>
+                    </action>
+                    <action method="addColumnInputName">
+                        <input_name>position</input_name>
+                    </action>
+                </reference>
+            </block>
+        </block>
+    </adminhtml_group_cms>
+
+    <adminhtml_group_cmsgrid>
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="skylab_banner/adminhtml_group_edit_tab_cms" name="banner_group_edit_tab_cms"/>
+        </block>
+    </adminhtml_group_cmsgrid>
+
+    <adminhtml_group_category>
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="skylab_banner/adminhtml_group_edit_tab_category" name="banner_group_edit_tab_category"/>
+        </block>
+    </adminhtml_group_category>
+</layout>

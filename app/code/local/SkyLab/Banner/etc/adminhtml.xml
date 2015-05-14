@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <cms translate="title" module="skylab_banner">
+            <children>
+                <skylab_banner translate="title" module="skylab_banner">
+                    <title>Banners</title>
+                    <children>
+                        <manage_banners translate="title" module="skylab_banner">
+                            <title>Manage Banners</title>
+                            <action>adminhtml/banners/index</action>
+                            <sort_order>200</sort_order>
+                        </manage_banners>
+                        <manage_groups translate="title" module="skylab_banner">
+                            <title>Manage Banner Groups</title>
+                            <action>adminhtml/group/index</action>
+                            <sort_order>200</sort_order>
+                        </manage_groups>
+                        <settings translate="title" module="skylab_banner">
+                            <title>Settings</title>
+                            <sort_order>300</sort_order>
+                            <action>adminhtml/system_config/edit/section/SkyLab_Banner</action>
+                        </settings>
+                    </children>
+                    <sort_order>100</sort_order>
+                </skylab_banner>
+            </children>
+        </cms>
+    </menu>
+    <acl>
+        <all>
+            <title>Allow Everything</title>
+        </all>
+        <resources>
+            <admin>
+                <children>
+                    <cms>
+                        <children>
+                            <skylab_banner translate="title" module="skylab_banner">
+                                <children>
+                                    <manage_banners translate="title" module="skylab_banner">
+                                        <title>Manage Banners</title>
+                                        <sort_order>10</sort_order>
+                                    </manage_banners>
+                                    <manage_groups translate="title" module="skylab_banner">
+                                        <title>Manage Banner Groups</title>
+                                        <sort_order>20</sort_order>
+                                    </manage_groups>
+                                    <settings translate="title" module="skylab_banner">
+                                        <title>Settings</title>
+                                        <sort_order>30</sort_order>
+                                    </settings>
+                                </children>
+                                <title>Banners</title>
+                                <sort_order>10</sort_order>
+                            </skylab_banner>
+                        </children>
+                    </cms>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <SkyLab_Banner translate="title" module="skylab_banner">
+                                        <title>Banners</title>
+                                        <sort_order>10</sort_order>
+                                    </SkyLab_Banner>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <skylab translate="label" module="skylab_surcharge">
+            <label>Sky Lab</label>
+            <sort_order>200</sort_order>
+        </skylab>
+    </tabs>
+    <sections>
+        <SkyLab_Surcharge translate="label" module="skylab_surcharge">
+            <label>Night Hours</label>
+            <tab>skylab</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>20</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <night_hours translate="label" module="skylab_surcharge">
+                    <label>Night Hours Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>2</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled translate="label comment" module="skylab_surcharge">
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Enable night hours.]]></comment>
+                        </enabled>
+                        <amount translate="label comment" module="skylab_surcharge">
+                            <label>Amount</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <validate>validate-number</validate>
+                            <comment><![CDATA[Night hours amount in BASE_CURRENCY.]]></comment>
+                        </amount>
+                        <label translate="label comment" module="skylab_surcharge">
+                            <label>Label</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </label>
+                        <start_hour translate="label comment" module="skylab_surcharge">
+                            <label>Start Time</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Night hours start hour.]]></comment>
+                        </start_hour>
+                        <end_hour translate="label comment" module="skylab_surcharge">
+                            <label>End Time</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Night hours end hour.]]></comment>
+                        </end_hour>
+                    </fields>
+                </night_hours>
+            </groups>
+        </SkyLab_Surcharge>
+    </sections>
+</config>

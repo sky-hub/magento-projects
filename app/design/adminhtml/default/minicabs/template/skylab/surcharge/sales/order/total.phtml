@@ -1,0 +1,13 @@
+<?php $this->setPriceDataObject($this->getSource()) ?>
+<?php if ((float)$this->getSource()->getNightHoursSurcharge()): ?>
+    <?php /** @var $helper SkyLab_Surcharge_Helper_Data */?>
+    <?php $helper = Mage::helper('skylab_surcharge'); ?>
+    <tr>
+        <td class="label">
+            <?php echo $helper->getFormattedLabel($this->getSource()->getStoreId()) ?>
+        </td>
+        <td>
+            <?php echo $this->displayPrices($this->getSource()->getBaseNightHoursSurcharge(), $this->getSource()->getNightHoursSurcharge()); ?>
+        </td>
+    </tr>
+<?php endif; ?>
